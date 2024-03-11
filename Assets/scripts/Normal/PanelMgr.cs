@@ -26,6 +26,15 @@ public class PanelMgr : MonoBehaviour
         itemText.text = text;
     }
     
+    public void SetPanel(String img, string text)
+    {
+        Texture2D texture = Resources.Load<Texture2D>(img);
+        Sprite paperSprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+        itemImg.sprite = paperSprite;
+        itemText.text = text;
+        ShowPanel();
+    }
+    
     public void ShowPanel()
     {
         panel.gameObject.SetActive(true);

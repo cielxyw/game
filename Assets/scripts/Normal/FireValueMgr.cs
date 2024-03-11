@@ -40,14 +40,25 @@ public class FireValueMgr : MonoBehaviour
         slider.value = fireValue;
     }
 
-    public void AddFireValue()
+    public void AddFireValueByItem(float f)
     {
-        fireValue += fireSpeed;
+        fireValue += f;
+        slider.value = fireValue;
         if (fireValue >= fireValueMax)
         {
             fireValue = fireValueMax;
             GameMgr.instance.GameOver();
         }
+    }
+    
+    public void AddFireValue()
+    {
+        fireValue += fireSpeed;
         slider.value = fireValue;
+        if (fireValue >= fireValueMax)
+        {
+            fireValue = fireValueMax;
+            GameMgr.instance.GameOver();
+        }
     }
 }

@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class One_Statue : MonoBehaviour
 {
     public static One_Statue instance;
     
-    public int curLevel = 1;
-    public int maxLevel = 3;
-    
+    public int curLevel = 0;
+    public int maxLevel = 2;
+    public TextMeshProUGUI text;
     void Awake()
     {
         instance = this;
@@ -31,6 +32,7 @@ public class One_Statue : MonoBehaviour
         if(curLevel < maxLevel)
         {
             curLevel++;
+            text.text = (curLevel + 12).ToString();
         }
         else
         {

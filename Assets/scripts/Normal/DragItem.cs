@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class DragItem : MonoBehaviour
 {
-    Vector3 defaultPosition;
+    public Vector3 defaultPosition;
     public List<RectTransform> InteractionItem;
     public delegate bool OnUseItem(int index = -1);
     public OnUseItem onUseItem;
