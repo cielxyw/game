@@ -1,12 +1,21 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class player : MonoBehaviour
 {
+    public static player instance;
+    
     public float playerMoveSpeed;
     public Rigidbody2D playerRB;
     public Collider2D playerColl;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     void Start()
     {
         playerColl = GetComponent<Collider2D>();
