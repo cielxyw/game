@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\Normal\GameMgr.cs" />
      <Compile Include="Assets\Scripts\3\Three_Jig.cs" />
      <Compile Include="Assets\Scripts\Normal\FireValueMgr.cs" />
+     <Compile Include="Assets\Scripts\1\One_AniEvent.cs" />
      <Compile Include="Assets\Scripts\3\Three_Ext.cs" />
      <Compile Include="Assets\Scripts\player.cs" />
      <Compile Include="Assets\Scripts\Normal\PanelMgr.cs" />
@@ -67,7 +68,6 @@
      <Compile Include="Assets\Scripts\4\Four_Mgr.cs" />
      <Compile Include="Assets\Scripts\ObstacleSpawner.cs" />
      <Compile Include="Assets\Scripts\3\Three_Hydrant.cs" />
-     <Compile Include="Assets\Scripts\1\One_AniEvent.cs" />
      <Folder Include="Assets" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\mergetool.ja.txt" />
      <Folder Include="Assets\Resources" />
