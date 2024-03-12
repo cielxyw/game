@@ -10,6 +10,9 @@ public class One_Statue : MonoBehaviour
     public int curLevel = 0;
     public int maxLevel = 2;
     public TextMeshProUGUI text;
+    public Animator levelMask;
+    public TextMeshProUGUI levelText;
+    public SpriteRenderer bgSprite;
     void Awake()
     {
         instance = this;
@@ -32,11 +35,19 @@ public class One_Statue : MonoBehaviour
         if(curLevel < maxLevel)
         {
             curLevel++;
-            text.text = (curLevel + 12).ToString();
+            int curLayer = curLevel + 11;
+            levelText.text = curLayer.ToString();
+            levelMask.SetTrigger("NextLevel");
         }
         else
         {
             Debug.Log("Next Level");
         }
+    }
+
+    public void ChangeLevelBg()
+    {
+        int curLayer = curLevel + 11;
+        bgSprite.sprite = Resources.Load<Sprite>("Tex/" + curLayer);
     }
 }
