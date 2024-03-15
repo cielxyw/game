@@ -5,11 +5,12 @@ using UnityEngine;
 public class Two_Extinguisher : MonoBehaviour
 {
     public float subFireValue = 10;
+    public GameObject hydrant;
     // Start is called before the first frame update
     void Start()
     {
         this.GetComponent<DragItem>().onUseItem += OnUse;
-
+        this.GetComponent<DragItem>().onUseSpeItem += OnUseSpe;
     }
 
     // Update is called once per frame
@@ -32,6 +33,14 @@ public class Two_Extinguisher : MonoBehaviour
         {
             FireValueMgr.instance.SubFireValue(subFireValue);
         }
+
+        return false;
+    }
+    
+    public bool OnUseSpe()
+    {
+        Debug.Log("Scene 3 Extinguisher Used!");
+        hydrant.GetComponent<Three_Hydrant>().Broken();
 
         return false;
     }

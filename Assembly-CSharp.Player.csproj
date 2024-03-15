@@ -68,6 +68,13 @@
      <Compile Include="Assets\Scripts\4\Four_Mgr.cs" />
      <Compile Include="Assets\Scripts\ObstacleSpawner.cs" />
      <Compile Include="Assets\Scripts\3\Three_Hydrant.cs" />
+     <Compile Include="Assets\Scripts\Normal\AudioMgr.cs" />
+     <Compile Include="Assets\Scripts\3\Three_Mgr.cs" />
+     <Compile Include="Assets\Scripts\3\Three_ChangeExtImg.cs" />
+     <Compile Include="Assets\Scripts\3\Three_NewJigMgr.cs" />
+     <Compile Include="Assets\Scripts\3\Three_StepOneCord.cs" />
+     <Compile Include="Assets\Scripts\3\Three_StepTwoItemUse.cs" />
+     <Compile Include="Assets\Scripts\3\Three_Video.cs" />
      <Reference Include="UnityEngine">
      <HintPath>E:\UnityEngine\2021.3.21f1c1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.dll</HintPath>
      </Reference>

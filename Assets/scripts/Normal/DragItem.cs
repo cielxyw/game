@@ -7,8 +7,14 @@ public class DragItem : MonoBehaviour
 {
     public Vector3 defaultPosition;
     public List<RectTransform> InteractionItem;
+    public RectTransform speInteractionItem;
     public delegate bool OnUseItem(int index = -1);
     public OnUseItem onUseItem;
+    
+    public delegate bool OnUseSpeItem();
+    public OnUseSpeItem onUseSpeItem;
+
+    public RectTransform selfTriArea;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,8 +54,25 @@ public class DragItem : MonoBehaviour
             num = -1;
             return false;
         }
+        
         Vector2 firstUIScreenSpace = Camera.main.WorldToScreenPoint(this.transform.position);
-
+        if (selfTriArea != null)
+        {
+            firstUIScreenSpace = Camera.main.WorldToScreenPoint(selfTriArea.transform.position);
+        }
+        
+        if (speInteractionItem != null)
+        {
+            bool isIntersecting = RectTransformUtility.RectangleContainsScreenPoint(speInteractionItem, firstUIScreenSpace, Camera.main);
+            if (isIntersecting)
+            {
+                Debug.Log(this.name + " is intersecting with " + speInteractionItem.name + ": " + isIntersecting);
+                onUseSpeItem();
+                num = -1;
+                return false;
+            }  
+        }
+        
         for(int i =0;i < InteractionItem.Count; i++)
         { 
             bool isIntersecting = RectTransformUtility.RectangleContainsScreenPoint(InteractionItem[i], firstUIScreenSpace, Camera.main);

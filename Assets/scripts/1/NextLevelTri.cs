@@ -10,7 +10,7 @@ public class NextLevelTri : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             One_Statue.instance.NextLevel();
-            player.instance.GetComponent<obstacle>().Die();
+            player.instance.GetComponent<obstacle>().Next();
         }
     }
 }

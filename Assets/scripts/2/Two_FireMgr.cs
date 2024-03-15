@@ -17,5 +17,10 @@ public class Two_FireMgr : MonoBehaviour
         if(fires.Count <= index)
             return;
         fires[index].SetActive(show);
+        if (!show)
+        {
+            AudioMgr.instance.LoadAudioClip("OutFire");
+            Three_Mgr.instance.leftFire--;
+        }
     }
 }

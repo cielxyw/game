@@ -68,6 +68,13 @@
      <Compile Include="Assets\Scripts\4\Four_Mgr.cs" />
      <Compile Include="Assets\Scripts\ObstacleSpawner.cs" />
      <Compile Include="Assets\Scripts\3\Three_Hydrant.cs" />
+     <Compile Include="Assets\Scripts\Normal\AudioMgr.cs" />
+     <Compile Include="Assets\Scripts\3\Three_Mgr.cs" />
+     <Compile Include="Assets\Scripts\3\Three_ChangeExtImg.cs" />
+     <Compile Include="Assets\Scripts\3\Three_NewJigMgr.cs" />
+     <Compile Include="Assets\Scripts\3\Three_StepOneCord.cs" />
+     <Compile Include="Assets\Scripts\3\Three_StepTwoItemUse.cs" />
+     <Compile Include="Assets\Scripts\3\Three_Video.cs" />
      <Folder Include="Assets" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\mergetool.ja.txt" />
      <Folder Include="Assets\Resources" />
@@ -106,6 +113,7 @@
      <Folder Include="Assets\Animation" />
      <Folder Include="Library\PackageCache\com.unity.2d.pixel-perfect@5.0.3\Tests" />
      <None Include="Library\PackageCache\com.unity.2d.pixel-perfect@5.0.3\package.json" />
+     <Folder Include="Assets\Texture\Level_3" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\clientcommon.es.txt" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources" />
      <Folder Include="Library\PackageCache\com.unity.2d.common@6.0.6\Tests" />
@@ -240,6 +248,7 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\guihelp.zh-Hans.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.ui@1.0.0" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+     <Folder Include="Assets\Resources\Audio" />
      <Folder Include="Assets\Scripts\4" />
      <Folder Include="Library\PackageCache\com.unity.mathematics@1.2.6" />
      <Folder Include="Library\PackageCache\com.unity.2d.psdimporter@6.0.7" />

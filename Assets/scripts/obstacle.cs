@@ -20,9 +20,15 @@ public class obstacle : MonoBehaviour
 
     public void Die()
     {
-        StartCoroutine(Respawn(0.5f));
+        AudioMgr.instance.LoadAudioClip("Level1_HitedSound");
+        transform.position = startPos;
     }
 
+    public void Next()
+    {
+        transform.position = startPos;
+    }
+    
     IEnumerator Respawn(float duration)
     {
         yield return new WaitForSeconds(duration);
