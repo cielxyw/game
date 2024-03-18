@@ -21,8 +21,12 @@ public class Three_Hydrant : MonoBehaviour
 
     public void OnClick()
     {
-        if(!Three_Mgr.instance.isBroken)
+        if (!Three_Mgr.instance.isBroken)
+        {
+            PanelMgr.instance.SetPanel("Tex/2/2", "");
             return;
+        }
+
         jigsaw.SetActive(true);
     }
 

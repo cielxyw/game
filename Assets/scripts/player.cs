@@ -33,7 +33,7 @@ public class player : MonoBehaviour
     void Perspective()//-4.3 ~ 4 1~0.5
     {
         float y = transform.position.y;
-        float scale = 1 - (y + 4.3f)/8.3f * 0.5f;
+        float scale = 2f - (y + 4.3f)/8.3f * 1.5f;
         transform.localScale = new Vector3(scale, scale, 1);
     }
 

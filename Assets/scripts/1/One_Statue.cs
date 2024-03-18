@@ -7,18 +7,15 @@ public class One_Statue : MonoBehaviour
 {
     public static One_Statue instance;
     
-    public int curLevel = 0;
+    public int curLevel = 11;
     public int maxLevel = 2;
     public TextMeshProUGUI text;
     public Animator levelMask;
     public TextMeshProUGUI levelText;
     public SpriteRenderer bgSprite;
-    public ObstacleSpawner firstSpawner; //low
-    public ObstacleSpawner secondSpawner; //high
+    public List<ObstacleSpawner> firstSpawner; //low
     public float firstSpeedUp;
-    public float secondSpeedUp;
     public float firstSpawnInterval;
-    public float secondSpawnInterval;
     
     public List<GameObject> obstacles = new List<GameObject>();
     
@@ -51,25 +48,26 @@ public class One_Statue : MonoBehaviour
             obstacles.Clear();
             
             curLevel++;
-            int curLayer = curLevel + 11;
+            int curLayer = curLevel;
             levelText.text = curLayer.ToString();
             levelMask.SetTrigger("NextLevel");
-            //speed up the obstacle
-            firstSpawner.obstacleSpeed += firstSpeedUp;
-            secondSpawner.obstacleSpeed += secondSpeedUp;
-            //spawn interval
-            firstSpawner.spawnInterval *= firstSpawnInterval;
-            secondSpawner.spawnInterval *= secondSpawnInterval;
+
+            foreach (var spawner in firstSpawner)
+            {
+                spawner.obstacleSpeed += firstSpeedUp;
+                spawner.spawnInterval += firstSpawnInterval;
+            }
+
         }
         else
         {
-            Debug.Log("Next Level");
+            GameMgr.instance.NextLevel();
         }
     }
 
     public void ChangeLevelBg()
     {
-        int curLayer = curLevel + 11;
+        int curLayer = curLevel;
         bgSprite.sprite = Resources.Load<Sprite>("Tex/" + curLayer);
     }
 }

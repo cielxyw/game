@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Zero_Statue : MonoBehaviour
 {
     public static Zero_Statue instance;
     public bool zero_useCap = false;
-
+    public Image bgImg;
     public void Awake()
     {
         if (instance == null)
@@ -33,7 +34,8 @@ public class Zero_Statue : MonoBehaviour
             var paper =GameObject.Find("Canvas/Paper");
             if (paper.GetComponent<DragItem>().defaultPosition == paper.transform.position)
             {
-                PanelMgr.instance.SetPanel("Tex/Paper", "[Registration form] : The owner registration that needs to be submitted for residential occupancy Table, which records the basic information of the owner and the house number");
+                PanelMgr.instance.SetPanel("Tex/PaperUI", "");
+                PanelMgr.instance.subItem.SetActive(true);
             }
         }
         else if (i == 2) //Cap
@@ -41,7 +43,8 @@ public class Zero_Statue : MonoBehaviour
             var cap =GameObject.Find("Canvas/Cap");
             if (cap.GetComponent<DragItem>().defaultPosition == cap.transform.position)
             {
-                PanelMgr.instance.SetPanel("Tex/Paper", "[Bottle cap] : A golden bottle cap that seems to have changed little The power of district structure... ?");
+                PanelMgr.instance.SetPanel("Tex/CapUI", "");
+                PanelMgr.instance.subItem.SetActive(false);
             }
         }
     }

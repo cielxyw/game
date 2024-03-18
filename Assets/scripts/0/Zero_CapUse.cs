@@ -20,6 +20,9 @@ public class Zero_CapUse : MonoBehaviour
     {
         Debug.Log("Scene 0 Cap Used!");
         Zero_Statue.instance.SetCap();
+        Texture2D texture = Resources.Load<Texture2D>("Tex/AfterCap");
+        Sprite paperSprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+        Zero_Statue.instance.bgImg.sprite = paperSprite;
         Destroy(this.gameObject);
         return true;
     }

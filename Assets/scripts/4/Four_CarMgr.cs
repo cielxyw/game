@@ -22,7 +22,10 @@ public class Four_CarMgr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            truck.GetComponent<Four_Truck>().Move();
+        }
     }
     
     public void RemoveCar(GameObject go)
@@ -38,5 +41,4 @@ public class Four_CarMgr : MonoBehaviour
             truck.GetComponent<Four_Truck>().Move();
         }
     }
-    
 }

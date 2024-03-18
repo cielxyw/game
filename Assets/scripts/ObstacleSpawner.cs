@@ -37,7 +37,31 @@ public class ObstacleSpawner : MonoBehaviour
         GameObject obstacle = Instantiate(obstaclePrefab, spawnPoint.position, Quaternion.identity);
         obstacle.GetComponent<LifeTime>().Use = true;
         Rigidbody2D obstacleRigidbody = obstacle.GetComponent<Rigidbody2D>();
+        obstacleSpeed = Random.Range(obstacleSpeed - 1f, obstacleSpeed + 1f);
+        obstacleSpeed = Mathf.Clamp(obstacleSpeed, 0.3f, 6f);
         obstacleRigidbody.velocity = (Right ? Vector2.right : Vector2.left) * obstacleSpeed;
+        var curLevel = One_Statue.instance.curLevel;
+        int maxKind = GetObstacleKind(curLevel);
+        string path = "Tex/Obstacle/" + curLevel + "/" + curLevel + "0" + Random.Range(1, maxKind + 1);
+        var texture =
+            Resources.Load<Texture2D>(path);
+        Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+        obstacle.GetComponent<SpriteRenderer>().sprite = sprite;
         One_Statue.instance.obstacles.Add(obstacle);
+    }
+
+    int GetObstacleKind(int curLevel)
+    {
+        switch (curLevel)
+        {
+            case 11:
+                return 6;
+            case 12:
+                return 9;
+            case 13:
+                return 7;
+        }
+
+        return 0;
     }
 }

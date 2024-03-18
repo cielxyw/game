@@ -14,7 +14,8 @@ public class PanelMgr : MonoBehaviour
     public TextMeshProUGUI itemText;
 
     public GameObject other;
-
+    public GameObject subItem;
+    public GameObject mask;
     private void Awake()
     {
         instance = this;
@@ -37,6 +38,7 @@ public class PanelMgr : MonoBehaviour
     
     public void ShowPanel()
     {
+        mask.SetActive(true);
         panel.gameObject.SetActive(true);
     }
     

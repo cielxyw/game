@@ -28,6 +28,9 @@ public class Zero_PaperUse : MonoBehaviour
         else
         {
             Debug.Log("You need to use the cap first!");
+            PanelMgr.instance.SetPanel("Tex/PaperWithOutCapUI", "");
+            PanelMgr.instance.subItem.SetActive(false);
+            PanelMgr.instance.mask.SetActive(false);
             return false;
         }
         return false;
@@ -37,17 +40,21 @@ public class Zero_PaperUse : MonoBehaviour
     {
 
         PanelMgr panelMgr = PanelMgr.instance;
-        var paper = Resources.Load<Texture2D>("Tex/Paper");
+        var paper = Resources.Load<Texture2D>("Tex/PaperWithStamp");
         //Create Sprite
         Sprite paperSprite = Sprite.Create(paper, new Rect(0, 0, paper.width, paper.height), new Vector2(0.5f, 0.5f));
         //Set Panel
-        panelMgr.SetPanel(paperSprite, "You got a stamp!");
+        panelMgr.SetPanel(paperSprite, "");
+        panelMgr.subItem.SetActive(false);
+        panelMgr.itemImg.SetNativeSize();
         panelMgr.ShowPanel();
-        //Create Stamp
-        GameObject stamp = Resources.Load<GameObject>("Prefab/Stamp");
-        GameObject stampInstance = Instantiate(stamp);
-        stampInstance.transform.SetParent(panelMgr.other.transform);
-        stampInstance.transform.localPosition = new Vector3(0, 0, 0);
-        //Next Level
+        
+        //4秒后调用nextlevel
+        Invoke("NextLevel", 2);
+    }
+
+    public void NextLevel()
+    {
+        GameMgr.instance.NextLevel();
     }
 }

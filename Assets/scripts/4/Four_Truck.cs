@@ -4,16 +4,10 @@ using UnityEngine;
 
 public class Four_Truck : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void End()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        PanelMgr.instance.SetPanel("Tex/End", "");
+        PanelMgr.instance.subItem.SetActive(false);
     }
 
     public void Move()

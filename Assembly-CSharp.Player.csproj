@@ -42,6 +42,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\4\Four_CarMgr.cs" />
+     <Compile Include="Assets\Scripts\4\Four_CarDrag.cs" />
      <Compile Include="Assets\Scripts\1\NextLevelTri.cs" />
      <Compile Include="Assets\Scripts\3\Three_Door.cs" />
      <Compile Include="Assets\Scripts\ClickableObject.cs" />
@@ -65,6 +66,7 @@
      <Compile Include="Assets\Scripts\Normal\GameMgr.cs" />
      <Compile Include="Assets\Scripts\3\Three_Jig.cs" />
      <Compile Include="Assets\Scripts\Normal\FireValueMgr.cs" />
+     <Compile Include="Assets\Scripts\Start\StartBtn.cs" />
      <Compile Include="Assets\Scripts\1\One_AniEvent.cs" />
      <Compile Include="Assets\Scripts\3\Three_Ext.cs" />
      <Compile Include="Assets\Scripts\player.cs" />
@@ -75,7 +77,9 @@
      <Compile Include="Assets\Scripts\ObstacleSpawner.cs" />
      <Compile Include="Assets\Scripts\3\Three_Hydrant.cs" />
      <Compile Include="Assets\Scripts\3\Three_Video.cs" />
-     <Compile Include="Assets\Scripts\4\Four_CarDrag.cs" />
+     <Compile Include="Assets\Scripts\0\Zero_PaperAni.cs" />
+     <Compile Include="Assets\Scripts\4\Four_End.cs" />
+     <Compile Include="Assets\Scripts\Normal\CapMgr.cs" />
      <Reference Include="UnityEngine">
      <HintPath>E:\UnityEngine\2021.3.21f1c1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.dll</HintPath>
      </Reference>

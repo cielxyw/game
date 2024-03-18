@@ -27,6 +27,7 @@ public class Three_Mgr : MonoBehaviour
         {
             //延迟1秒播放视频
             Invoke("DelayVideo", 1);
+            Invoke("DelayNextLevel", 3);
         }
     }
 
@@ -34,5 +35,10 @@ public class Three_Mgr : MonoBehaviour
     {
         videoObj.SetActive(true);
         Three_Video.instance.videoPlayer.Play();
+    }
+
+    public void DelayNextLevel()
+    {
+        GameMgr.instance.NextLevel();
     }
 }

@@ -21,6 +21,10 @@ public class Two_FireMgr : MonoBehaviour
         {
             AudioMgr.instance.LoadAudioClip("OutFire");
             Three_Mgr.instance.leftFire--;
+            if (Three_Mgr.instance.leftFire <= 0)
+            {
+                PanelMgr.instance.SetPanel("Tex/2/1", "");
+            }
         }
     }
 }

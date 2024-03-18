@@ -42,6 +42,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\4\Four_CarMgr.cs" />
+     <Compile Include="Assets\Scripts\4\Four_CarDrag.cs" />
      <Compile Include="Assets\Scripts\1\NextLevelTri.cs" />
      <Compile Include="Assets\Scripts\3\Three_Door.cs" />
      <Compile Include="Assets\Scripts\ClickableObject.cs" />
@@ -65,6 +66,7 @@
      <Compile Include="Assets\Scripts\Normal\GameMgr.cs" />
      <Compile Include="Assets\Scripts\3\Three_Jig.cs" />
      <Compile Include="Assets\Scripts\Normal\FireValueMgr.cs" />
+     <Compile Include="Assets\Scripts\Start\StartBtn.cs" />
      <Compile Include="Assets\Scripts\1\One_AniEvent.cs" />
      <Compile Include="Assets\Scripts\3\Three_Ext.cs" />
      <Compile Include="Assets\Scripts\player.cs" />
@@ -75,7 +77,9 @@
      <Compile Include="Assets\Scripts\ObstacleSpawner.cs" />
      <Compile Include="Assets\Scripts\3\Three_Hydrant.cs" />
      <Compile Include="Assets\Scripts\3\Three_Video.cs" />
-     <Compile Include="Assets\Scripts\4\Four_CarDrag.cs" />
+     <Compile Include="Assets\Scripts\0\Zero_PaperAni.cs" />
+     <Compile Include="Assets\Scripts\4\Four_End.cs" />
+     <Compile Include="Assets\Scripts\Normal\CapMgr.cs" />
      <Folder Include="Assets" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\mergetool.ja.txt" />
      <Folder Include="Assets\Resources" />
@@ -96,6 +100,7 @@
      <None Include="Library\PackageCache\com.unity.modules.ai@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\differences.es.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\commontypes.zh-Hans.txt" />
+     <Folder Include="Assets\Resources\Tex\Obstacle\13" />
      <Folder Include="Library\PackageCache\com.unity.2d.tilemap.extras@2.2.4" />
      <Folder Include="Library\PackageCache\com.unity.modules.animation@1.0.0" />
      <None Include="Library\PackageCache\com.unity.ugui@1.0.0\package.json" />
@@ -103,6 +108,7 @@
      <None Include="Library\PackageCache\com.unity.2d.tilemap@1.0.0\package.json" />
      <Folder Include="Assets\TextMesh Pro\Resources\Sprite Assets" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\mergetool.es.txt" />
+     <Folder Include="Assets\Resources\Tex\2" />
      <None Include="Library\PackageCache\com.unity.ext.nunit@1.0.6\package.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\basecommands.es.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\cm.es.txt" />
@@ -129,10 +135,12 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\configurehelper.es.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.assetbundle@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.burst@1.6.6\Tests" />
+     <Folder Include="Assets\Resources\Tex\Obstacle\12" />
      <None Include="Library\PackageCache\com.unity.timeline@1.6.4\package.json" />
      <Folder Include="Assets\Scenes" />
      <Folder Include="Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\configurehelper.en.txt" />
+     <Folder Include="Assets\Resources\Tex\Obstacle\11" />
      <Folder Include="Assets\Prefab" />
      <Folder Include="Assets\TextMesh Pro\Resources\Fonts &amp; Materials" />
      <Folder Include="Library\PackageCache\com.unity.visualscripting@1.8.0" />
@@ -150,11 +158,13 @@
      <Folder Include="Assets\TextMesh Pro\Resources" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\plastic-gui.ko.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\basecommands.ja.txt" />
+     <Folder Include="Assets\Texture\4-挪车\车" />
      <Folder Include="Library\PackageCache\com.unity.modules.screencapture@1.0.0" />
      <None Include="Library\PackageCache\com.unity.visualscripting@1.8.0\package.json" />
      <None Include="Library\PackageCache\com.unity.timeline@1.6.4\ValidationExceptions.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\package.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\xdiff.zh-Hans.txt" />
+     <Folder Include="Assets\Texture\4-挪车\场景" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\xdiff.ko.txt" />
      <Folder Include="Library\PackageCache\com.unity.timeline@1.6.4" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\clientcommon.ja.txt" />
@@ -198,6 +208,7 @@
      <Folder Include="Library\PackageCache\com.unity.modules.physics@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Scripts" />
      <Folder Include="Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime" />
+     <Folder Include="Assets\Texture\4-挪车\点击放大" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\basecommands.en.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.vr@1.0.0" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\images.ko.txt" />
@@ -235,6 +246,7 @@
      <None Include="Library\PackageCache\com.unity.modules.wind@1.0.0\package.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\clientcommon.zh-Hant.txt" />
+     <Folder Include="Assets\Scripts\Start" />
      <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\xdiff.zh-Hant.txt" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
@@ -250,8 +262,10 @@
      <Folder Include="Library\PackageCache\com.unity.modules.ui@1.0.0" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <Folder Include="Assets\Resources\Audio" />
+     <Folder Include="Assets\Resources\Tex\3" />
      <Folder Include="Assets\Scripts\4" />
      <Folder Include="Library\PackageCache\com.unity.mathematics@1.2.6" />
+     <Folder Include="Assets\Texture\0-登记入住\道具点击放大" />
      <Folder Include="Library\PackageCache\com.unity.2d.psdimporter@6.0.7" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\FileSystemWatcherLicense.txt" />
      <None Include="Library\PackageCache\com.unity.2d.path@5.0.2\package.json" />
@@ -272,6 +286,7 @@
      <Folder Include="Assets\TextMesh Pro\Resources\Style Sheets" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\mergetool.zh-Hans.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\commontypes.zh-Hant.txt" />
+     <Folder Include="Assets\Texture\4-挪车" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\differences.ko.txt" />
      <Folder Include="Assets\TextMesh Pro\Fonts" />
      <None Include="Library\PackageCache\com.unity.modules.vehicles@1.0.0\package.json" />
@@ -285,6 +300,7 @@
      <Folder Include="Library\PackageCache\com.unity.ide.rider@3.0.18" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0\package.json" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\Texture\4-挪车\场景\说明.txt" />
      <Folder Include="Library\PackageCache\com.unity.2d.tilemap@1.0.0\Tests" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.feature.2d@1.0.0\package.json" />
@@ -292,9 +308,11 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\binmergetool.es.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\cm.ja.txt" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders\TMP_SDF_SSD.cginc" />
+     <Folder Include="Assets\Texture\0-登记入住\场景" />
      <Folder Include="Library\PackageCache\com.unity.2d.animation@7.0.9" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\ValidationConfig.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\images.ja.txt" />
+     <Folder Include="Assets\Texture\0.5-故事开头背景" />
      <Folder Include="Library\PackageCache\com.unity.ide.vscode@1.2.5" />
      <Folder Include="Library\PackageCache\com.unity.modules.vehicles@1.0.0" />
      <None Include="Library\PackageCache\com.unity.modules.xr@1.0.0\package.json" />
@@ -320,11 +338,13 @@
      <Folder Include="Library\PackageCache\com.unity.modules.director@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.audio@1.0.0" />
      <Folder Include="Assets\Config" />
+     <None Include="Assets\Texture\0-登记入住\道具点击放大\说明.txt" />
      <None Include="Library\PackageCache\com.unity.modules.terrain@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\commontypes.ko.txt" />
      <None Include="Library\PackageCache\com.unity.2d.sprite@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.17" />
      <None Include="Library\PackageCache\com.unity.modules.androidjni@1.0.0\package.json" />
+     <Folder Include="Assets\Texture\0-登记入住" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\commontypes.ja.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.video@1.0.0" />
@@ -338,11 +358,13 @@
      <None Include="Library\PackageCache\com.unity.mathematics@1.2.6\ValidationExceptions.json" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Package Resources" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+     <Folder Include="Assets\Texture\4-挪车\点击放大\选择是后" />
      <Folder Include="Library\PackageCache\com.unity.modules.terrain@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.2d.tilemap.extras@2.2.4\Tests" />
      <Folder Include="Library\PackageCache\com.unity.2d.sprite@1.0.0\Tests" />
      <None Include="Library\PackageCache\com.unity.modules.animation@1.0.0\package.json" />
      <Folder Include="Assets\Texture" />
+     <Folder Include="Assets\Texture\0-登记入住\道具点击放大\登记表动画帧" />
      <Folder Include="Assets\TextMesh Pro\Documentation" />
      <None Include="Library\PackageCache\com.unity.2d.animation@7.0.9\package.json" />
      <Folder Include="Library\PackageCache\com.unity.modules.uielementsnative@1.0.0" />
@@ -359,6 +381,7 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\cm.zh-Hans.txt" />
      <None Include="Library\PackageCache\com.unity.2d.psdimporter@6.0.7\package.json" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0\package.json" />
+     <Folder Include="Assets\Resources\Tex\Obstacle" />
      <None Include="Library\PackageCache\com.unity.modules.uielements@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\plastic-gui.ja.txt" />
      <None Include="Library\PackageCache\com.unity.burst@1.6.6\package.json" />
@@ -366,6 +389,7 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\workspaceserver.zh-Hant.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\cm.zh-Hant.txt" />
+     <Folder Include="Assets\Texture\Level_1" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\localization\xdiff.en.txt" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
      <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0" />
